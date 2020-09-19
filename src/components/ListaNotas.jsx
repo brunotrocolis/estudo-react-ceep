@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
+import { Row, Col } from 'react-bootstrap';
 import CardNota from './CardNota';
 
 class ListaDeNotas extends Component {
     render() {
         return (
-            <ul>
-                {Array.of('Trabalaho', 'Estudo', 'Trabalho').map(categoria => {
+            <Row>
+                {Array.of('Trabalaho', 'Estudo', 'Trabalho').map((categoria, index) => {
                     return (
-                        <li>
+                        <Col sm={4} key={index}>
                             <CardNota />
-                        </li>
+                        </Col>
                     );
                 })}
-            </ul>
+            </Row>
         );
     }
 }

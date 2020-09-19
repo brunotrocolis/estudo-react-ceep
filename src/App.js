@@ -1,14 +1,22 @@
 import React, { Component } from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
+
+import ListaDeNotas from './components/ListaNotas';
 import FormularioCadastro from './components/FormularioCadastro';
-import ListaNotas from './components/ListaNotas';
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <FormularioCadastro />
-        <ListaNotas />
-      </div>
+      <Container>
+        <Row>
+          <Col sm={3}>
+            <FormularioCadastro />
+          </Col>
+          <Col sm={9}>
+            <ListaDeNotas />
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }
