@@ -5,11 +5,15 @@ import CardNota from '../CardNota';
 class ListaDeNotas extends Component {
     render() {
         return (
-            <Row>
-                {Array.of('Trabalaho', 'Estudo', 'Trabalho').map((categoria, index) => {
+            <Row className="display-flex">
+                {this.props['lista-notas'].map((nota, index) => {
                     return (
                         <Col sm={4} key={index}>
-                            <CardNota />
+                            <CardNota
+                                titulo={nota.titulo}
+                                texto={nota.texto}
+                                apagar-nota={this.props['apagar-nota'].bind(this, index)}
+                            />
                         </Col>
                     );
                 })}
