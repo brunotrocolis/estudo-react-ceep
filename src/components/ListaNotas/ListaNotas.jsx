@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
-import CardNota from './CardNota';
+import CardNota from '../CardNota';
 
 class ListaDeNotas extends Component {
     render() {
